@@ -1,0 +1,21 @@
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.leftContainer {
+    width: 560px;
+    height: 438px;
+
+    padding: 120px 0 0;
+}
+
+.rightContainer {
+    width: 380px;
+    height: 536px;
+
+    padding: 40px 20px;
+    background-color: #00000080;
+
+    text-align: center;
+}
