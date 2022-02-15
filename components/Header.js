@@ -1,5 +1,3 @@
-import Image from 'next/image'
-import HomeImage from "../public/assets/derm-home.jpg"
 import styles from "../styles/Header.module.css"
 import {useState} from 'react'
 
