@@ -34,9 +34,9 @@ export const Header = (props) => {
                 <h1 className={styles.rightTitleMessage}>
                     <strong>The Best {props.value?.service || "[service]"} Treatment In {props.value?.city || "[city]"}.</strong>
                 </h1>
-                <h5 className={styles.rightColoredMessage}>
+                <h3 className={styles.rightColoredMessage}>
                     <strong>Mobile. Painless. Comprehensive.</strong>
-                </h5>
+                </h3>
                 <p className={styles.rightMessage}>
                     <span>Visit us, or we will travel to you - Schedule your in-clinic or mobile appointment today!</span>
                 </p>
