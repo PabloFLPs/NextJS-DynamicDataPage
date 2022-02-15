@@ -2,3 +2,97 @@
     justify-content: center;
     text-align: center;
 }
+
+.slogan {
+    padding-top: 60px;
+}
+
+.titleMessage {
+    font: 36px "Montserrat", sans-serif;
+    color: #444444;
+    margin: 0 0 10px;
+}
+
+.message {
+    font: 16px "Open Sans", sans-serif;
+    color: #888888;
+    margin: 20px 0;
+}
+
+.iconsSection {
+    display: inline-flex;
+    gap: 20px;
+
+    padding-top: 20px;
+}
+
+.iconSectionTitle {
+    font: 24px "Open Sans", sans-serif;
+    color: #444444;
+
+    padding: 0 20px;
+}
+
+.iconDescription {
+    font: 16px "Open Sans", sans-serif;
+    color: #888888;
+
+    padding: 0 20px;
+}
+
+.itemsContainer {
+    width: 300px;
+    height: 320px;
+
+    background-color: #f4f4f4;
+
+    border: none;
+    border-radius: 3px;
+
+    align-items: center;
+}
+
+.icons {
+    width: 80px;
+    height: 80px;
+
+    color: #444444;
+    margin-top: 16px;
+}
+
+.contactPhone{
+    display: flex;
+    gap: 160px;
+
+    padding: 20px 0;
+    margin-top: 60px;
+
+    justify-content: center;
+    align-items: center;
+    
+    font: 16px "Open Sans", sans-serif;
+    color: #ffffff;
+    background-color: #005df0;
+}
+
+.buttonContainer {
+    width: 220px;
+}
+
+.imageContainer {
+    padding: 60px 0;
+}
+
+.image {
+    border: none;
+    border-radius: 3px;
+}
+
+.serviceData {
+    font: "Open Sans", sans-serif;
+}
+
+.serviceTitle {
+    font: 48px "Open Sans", sans-serif;
+    color: #333333;
+}
