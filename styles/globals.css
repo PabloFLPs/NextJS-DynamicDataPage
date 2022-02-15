@@ -17,8 +17,21 @@ a {
 
 input {
   width: 100%;
+
+  padding: 14px 15px;
+  border: 0px;
+  border-radius: 3px;
+
+  background-color: #dddddd;
 }
 
 button {
   width: 100%;
+
+  padding: 14px 15px;
+  border: 0px;
+  border-radius: 3px;
+
+  color: #444444;
+  background-color: #fdbd10;
 }
