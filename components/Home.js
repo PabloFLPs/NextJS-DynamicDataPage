@@ -4,9 +4,9 @@ import { HiOutlineSearch, HiOutlineSun } from "react-icons/hi";
 import { AiFillCar } from "react-icons/ai";
 
 import Image from 'next/image'
-import BefAftImage from "../public/assets/derm-before-after.jpg"
 
 export const Home = (props) => {
+    //console.log(props.value?.content)
 
     return (
         <div className={styles.main}>
@@ -54,11 +54,7 @@ export const Home = (props) => {
                 </div>
             </div>
             <div className={styles.imageContainer}>
-                <Image className={styles.image} src={BefAftImage}/>
-            </div>
-
-            <div className={styles.serviceData}>
-                <h1 className={styles.serviceTitle}>{props.value?.service || "[service]"} in {props.value?.city || "[city]"}</h1>
+                {props.value?.image && <Image className={styles.image} src={props.value?.image} width="720" height="480"/>}
             </div>
         </div>
     )
