@@ -3,6 +3,9 @@ import styles from "../styles/ServiceData.module.css"
 import {Header} from "../components/Header"
 import {Home} from "../components/Home"
 import {Contact} from "../components/Contact"
+import {RatingsSection} from "../components/RatingsSection"
+import {ServiceAreas} from "../components/ServiceAreas"
+import {Footer} from "../components/Footer"
 
 import BlockContent from '@sanity/block-content-to-react'
 
@@ -19,6 +22,9 @@ export const Data = ({name, service, city, image, content}) => {
             </div>
 
             <Contact value={{name, service, city, image}}/>
+            <RatingsSection/>
+            <ServiceAreas/>
+            <Footer value={{name, service, city, image}}/>
         </div>
     )
 }
