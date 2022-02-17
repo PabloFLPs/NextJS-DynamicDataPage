@@ -1,0 +1,40 @@
+.main {
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+
+    background-color: #1274e7;
+
+    height: 640px;
+    margin: auto;
+}
+
+.title {
+    font: 36px "Montserrat", sans-serif;
+    text-align: center;
+
+    padding-top: 100px;
+}
+
+.itemsContainer {
+    display: inline-flex;
+    gap: 20px;
+}
+
+.itemsContainer div{
+    width: 300px;
+
+    border: none;
+    border-radius: 3px;
+
+    padding: 40px 20px;
+}
+
+.itemsContainer p{
+    font-weight: bold;
+    padding-top: 40px;
+}
+
+.darkBlue {
+    background-color: #00000026;
+}
