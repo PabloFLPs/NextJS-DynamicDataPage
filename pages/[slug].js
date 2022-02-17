@@ -1,20 +1,35 @@
-import {Header} from "../components/Header"
+import styles from "../styles/ServiceData.module.css"
 
-export const Data = ({service, city}) => {
+import {Header} from "../components/Header"
+import {Home} from "../components/Home"
+import {Contact} from "../components/Contact"
+
+import BlockContent from '@sanity/block-content-to-react'
+
+export const Data = ({name, service, city, image, content}) => {
+
     return (
         <div>
-            <Header value={{service, city}}/>
+            <Header value={{name, service, city, image}}/>
+            <Home value={{name, service, city, image}}/>
+
+            <div className={styles.serviceData}>
+                <h1 className={styles.serviceTitle}>{service || "[service]"} in {city || "[city]"}</h1>
+                <BlockContent className={styles.blockContent} blocks={content}/>
+            </div>
+
+            <Contact value={{name, service, city, image}}/>
         </div>
     )
 }
 
 export const getServerSideProps = async (pageContext) => {
-    const {slug: pageSlug} = pageContext.query
+    const {slug: pageSlug} = pageContext.params
 
     if(!pageSlug) return {notFound: true}
 
     const query = encodeURIComponent(
-        `*[ _type == "service" && slug.current == "${pageSlug}" ]{name, service, city}`
+        `*[ _type == "service" && slug.current == "${pageSlug}" ]{name, service, city, image, content}`
     )
 
     /*
@@ -30,16 +45,19 @@ export const getServerSideProps = async (pageContext) => {
             return {notFound: true}
         })
 
-    console.log(result.result[0])
+    const {name, service, city, image, content} = result.result[0]
 
-    const {name, service, city} = result.result[0]
+    const imageSrc = image.asset._ref.replace("image-","").split("").reverse().join("").replace("-",".").split("").reverse().join("")
+    const serviceImage = `https://cdn.sanity.io/images/vq7ukn0r/production/${imageSrc}`
 
     if(!service && !city) return {notFound: true}
     else return {
         props: {
             name: name,
             service: service,
-            city: city
+            city: city,
+            image: serviceImage,
+            content: content,
         }
     }
 }
