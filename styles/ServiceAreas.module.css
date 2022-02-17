@@ -1,0 +1,33 @@
+.main {
+    justify-content: center;
+    text-align: center;
+
+    font: 16px "Open Sans", sans-serif;
+    color: #333333;
+
+    padding: 40px 0;
+
+    background-color: #f5f5f5;
+}
+
+.title {
+    font: 48px "Open Sans", sans-serif;
+    color: #444444;
+}
+
+.container {
+    display: inline-flex;
+    gap: 40px;
+
+    margin: auto;
+}
+
+.itemsContainer {
+    text-align: justify;
+    width: 360px;
+}
+
+.itemsContainer span{
+    text-align: center;
+    color: #888888;
+}
