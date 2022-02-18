@@ -6,31 +6,11 @@ export const Contact = (props) => {
     const [email, setEmail] = useState('')
     const [phone, setPhone] = useState('')
 
-    const [disableButtonState, setDisableButtonState] = useState(false)
-
-    async function onSubmit(event) {
-        event.preventDefault()
-
-        const formToBeSubmitted = {
-            name: name,
-            email: email,
-            message: phone
-        }
-
-        setDisableButtonState(true)
-
-        try {
-            await axios.post("https://email-free-api.herokuapp.com/send-email", formToBeSubmitted)
-        } catch (error) {}
-        
-        setDisableButtonState(false)
-    }
-
     return (
         <div className={styles.main}>
             <h2 className={styles.titleMessage}>{props.value?.service || "[service]"} in {props.value?.city || "[city]"}</h2>
             <p className={styles.message}>Book your appointment today!.</p>
-            <form className={styles.formContainer} onSubmit={onSubmit}>
+            <form className={styles.formContainer}>
                 <div className={styles.formFields}>
                     <input type="text" id="name" name="name" value={name} onChange={event => setName(event.target.value)} placeholder="Enter Your Full Name" required/>
                 </div>
@@ -44,7 +24,7 @@ export const Contact = (props) => {
                 </div>
 
                 <div className={styles.formFields}>
-                    <button type="submit" disabled={disableButtonState}>Get Now</button>
+                    <button type="submit">Get Now</button>
                 </div>
             </form>
             <div className={styles.spamMessage}>
