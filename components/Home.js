@@ -5,8 +5,20 @@ import { AiFillCar } from "react-icons/ai";
 
 import Image from 'next/image'
 
+import urlBuilder from "@sanity/image-url"
+import { useEffect, useState } from "react"
+
 export const Home = (props) => {
-    //console.log(props.value?.content)
+    const [imageURL, setImageURL] = useState("")
+
+    useEffect(() => {
+        const serviceImage = urlBuilder({
+            projectId: "vq7ukn0r",
+            dataset: "production",
+        })
+
+        setImageURL(serviceImage.image(props.value?.image))
+    }, [props.value?.image])
 
     return (
         <div className={styles.main}>
@@ -34,7 +46,7 @@ export const Home = (props) => {
                         <span>Free of Pain, Full of Comfort</span>
                     </h3>
                     <p className={styles.iconDescription}>
-                        <span>Go back to wearing your favourite clothes, no more obstacles in your way! Guaranteed results, satisfied customers.</span>
+                        <span>Go back to wearing your favorite clothes, no more obstacles in your way! Guaranteed results, satisfied customers.</span>
                     </p>
                 </div>
                 <div className={styles.itemsContainer}>
@@ -54,7 +66,7 @@ export const Home = (props) => {
                 </div>
             </div>
             <div className={styles.imageContainer}>
-                {props.value?.image && <Image className={styles.image} src={props.value?.image} width="720" height="480"/>}
+                {imageURL && <Image className={styles.image} src={`${imageURL || "./"}`} width="720" height="480"/>}
             </div>
         </div>
     )
