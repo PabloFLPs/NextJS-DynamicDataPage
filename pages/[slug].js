@@ -53,8 +53,10 @@ export const getServerSideProps = async (pageContext) => {
 
     const {name, service, city, image, content} = result.result[0]
 
+    /*
     const imageSrc = image.asset._ref.replace("image-","").split("").reverse().join("").replace("-",".").split("").reverse().join("")
     const serviceImage = `https://cdn.sanity.io/images/vq7ukn0r/production/${imageSrc}`
+    */
 
     if(!service && !city) return {notFound: true}
     else return {
@@ -62,7 +64,7 @@ export const getServerSideProps = async (pageContext) => {
             name: name,
             service: service,
             city: city,
-            image: serviceImage,
+            image: image,
             content: content,
         }
     }
