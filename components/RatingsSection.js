@@ -11,12 +11,12 @@ export const RatingsSection = () => {
 
         <div className={styles.itemsContainer}>
             <div>
-                <span>I got the genital wart about one and a half years ago. I went to see a doctor and she removed warts and it was fully gone in a month’s time.</span>
+                <span>I got the genital wart about one and a half years ago. I went to see a doctor and she removed warts and it was fully gone in a month time.</span>
                 <p>Via Google Reviews</p>
                 <Image src={ratings} width={"100px"} height={"40px"}/>
             </div>
             <div className={styles.darkBlue}>
-                <span>Some pain, completely worth it! Can't believe I didn't have it done years ago. Would have been a scalpel job on the NHS so very pleased with this outcome. Bled for a couple of days but that was it! Almost immediately healed!</span>
+                <span>Some pain, completely worth it! Cannot believe I did not have it done years ago. Would have been a scalpel job on the NHS so very pleased with this outcome. Bled for a couple of days but that was it! Almost immediately healed!</span>
                 <p>Via Yelp.ca</p>
                 <Image src={ratings} width={"100px"} height={"40px"}/>
             </div>
