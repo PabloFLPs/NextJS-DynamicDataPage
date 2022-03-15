@@ -8,6 +8,8 @@ export const Header = (props) => {
 
     return (
         <div className={styles.main}>
+            <title>Dynamic Data NextJS Page</title>
+            
             <div className={styles.leftContainer}>
                 <h1 className={styles.rightTitleMessage}>
                     <strong>The Best {props.value?.service || "[service]"} Treatment In {props.value?.city || "[city]"}.</strong>
